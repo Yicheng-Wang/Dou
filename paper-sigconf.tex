@@ -46,7 +46,7 @@
 \begin{abstract}
   Trigger-action programming (TAP) is a novel approch to define connections between different Internet of Things (IoT) devices and services,
   which could translate human’s intent of IoT devices into desired automation. User-written TAP rules have been widely used
-  as a programming interface in popular IoT systems including IFTTT, Microsoft Flow, Samsung SmartThings etc.
+  as a programming interface in popular IoT systems.
   As users may experience difficulties in discovering related devices functionality and designing rules, recent works try to
   automatically generate TAP rules from past user event traces (time-stamped logs of sensor readings and manual actuations of devices).
   which turns problem into association rule mining of user's trace sequences.
@@ -105,7 +105,37 @@
 %% information and builds the first part of the formatted document.
 \maketitle
 \section{Introduction}
-Ambient Intelligence (AmI) 
+The goal of Ambient Intelligence (AmI) is to realize smart interactive environments which could assist us in our everyday 
+tasks, as reacting to our commands and predicting our behavior. The achievement of this goal is advancing with the developement
+of artificial intelligence techniques and the popularization of Internet of Things (IoT). Plenty of machine learning algorithms
+have been used in \textbf{behaviour modelling and prediction}, including probabilistic graphical models\cite{mohmed2020enhanced, nazerfard2012bayesian, wu2016behavior},
+imitation learning\cite{minor2015data, minor2017learning},neural network\cite{tax2018human, xu2016user}. This survey mainly focus 
+on rule-based AmI implementation\cite{pentland1999modeling, jakkula2007mining}, which determining what tasks are likely to be done next and doing them
+according to context-dependent rulesets, translate user’s intent of IoT devices into desired automation.
+
+
+\textbf{Trigger-action programming (TAP)}\cite{ghiani2017personalization, huang2015supporting, ur2014practical} is a novel rule-based approch 
+that provide interfaces for users to create personalized rulesets. TAP is in form of if-this-then-that (e.g., “IF trigger occurs WHILE conditions are true, THEN take
+ some action”), which is available on most popular IoT systems including IFTTT\cite{IFTTT}, Microsoft Flow\cite{levy2017microsoft},
+  Samsung SmartThings\cite{mossberg2014smartthings}, etc. These interface offer non-technical users the opportunity to define the connection between different IoT 
+  devices and to automate smart spaces in simple scenarios. 
+
+However, there are limitations having users write rules. Firstly, users writing rules may contain bugs or otherwise fail to match their intent\cite{mikolov2016roadmap, antonakakis2017understanding}.
+Furthermore, users often find it hard to reason about how sensors (e.g., motion sensors) in smart homes work. Tools have been developed to assist users writing TAP rules and 
+detecting bugs in TAP programs\cite{luo2020arbee, lien2016soli}, while it is difficult in the general case to solve the problems above. Therefore,
+recent works try to generate TAP rules or predict user activities based on traces automatically.
+
+Normally, traces of IoT devices are time-stamped logs of sensor readings and manual actuations of devices. The basic idea of smart space automation 
+is taking traces as input, mining the frequent and valuable patterns in the trace, recording these patterns as event-driven rules, regarding the proper features
+in the pattern as \emph{Trigger, Condition} and \emph{Action} of rules. 
+
+
+\begin{itemize}
+  \item \textbf{Memory segement}: \emph{byte} type array of fixed size 32K;
+  \item \textbf{Memory block}: \emph{long} type array of required data size;
+  \item \textbf{Cached RDD}: Array of user-defined type with required length, each element is of user-defined type.
+\end{itemize}
+
 Modern big data processing frameworks, including Hadoop\cite{shvachko2010hadoop}, Spark\cite{zaharia2010spark} and
 Flink\cite{carbone2015apache}, were all implemented in object-oriented languages such as Scala and Java, due to 
 theirs applicability across heterogeneous distributed clusters, convenience on memory management, and fertility 
