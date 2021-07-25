@@ -1,0 +1,132 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: paper-sigconf.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: mybib.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no key, author in IFTTT
+Warning--no author, editor, organization, or key in IFTTT
+Warning--to sort, need author or key in IFTTT
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Warning--no key, author in IFTTT
+Warning--no key, author in IFTTT
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no key, author in IFTTT
+Warning--no author, editor, organization, or key in IFTTT
+Warning--empty author in IFTTT
+Warning--empty year in IFTTT
+Warning--empty publisher in antonakakis2017understanding
+Warning--empty address in antonakakis2017understanding
+Warning--empty publisher in bruno2017polm2
+Warning--empty address in bruno2017polm2
+Warning--empty publisher in bruno2017ng2c
+Warning--empty address in bruno2017ng2c
+Warning--empty publisher in bruno2019runtime
+Warning--empty address in bruno2019runtime
+Warning--empty publisher in bu2013bloat
+Warning--empty address in bu2013bloat
+Warning--page numbers missing in both pages and numpages fields in carbone2015apache
+Warning--empty publisher in cohen2015data
+Warning--empty address in cohen2015data
+Warning--empty publisher in detlefs2004garbage
+Warning--empty address in detlefs2004garbage
+Warning--empty year in UnsafeRemove
+Warning--empty publisher in harris2000dynamic
+Warning--empty address in harris2000dynamic
+Warning--empty publisher in huang2015supporting
+Warning--empty address in huang2015supporting
+Warning--no number and no volume in jakkula2007mining
+Warning--page numbers missing in both pages and numpages fields in jakkula2007mining
+Warning--empty year in MinorGCLong
+Warning--empty publisher in jump2004dynamic
+Warning--empty address in jump2004dynamic
+Warning--empty publisher in kolokasis2020say
+Warning--empty address in kolokasis2020say
+Warning--page numbers missing in both pages and numpages fields in kolokasis2020say
+Warning--empty publisher in li2019scissorgc
+Warning--empty address in li2019scissorgc
+Warning--empty publisher in maas2017return
+Warning--empty address in maas2017return
+Warning--empty publisher in mikolov2016roadmap
+Warning--empty address in mikolov2016roadmap
+Warning--empty publisher in minor2015data
+Warning--empty address in minor2015data
+Warning--no number and no volume in mossberg2014smartthings
+Warning--page numbers missing in both pages and numpages fields in mossberg2014smartthings
+Warning--empty publisher in navasca2019gerenuk
+Warning--empty address in navasca2019gerenuk
+Warning--empty publisher in nazerfard2012bayesian
+Warning--empty address in nazerfard2012bayesian
+Warning--empty publisher in nguyen2016yak
+Warning--empty address in nguyen2016yak
+Warning--empty year in weakgenerational
+Warning--empty year in stackoverflow
+Warning--empty publisher in shvachko2010hadoop
+Warning--empty address in shvachko2010hadoop
+Warning--empty year in Tungsten
+Warning--empty publisher in suo2018characterizing
+Warning--empty address in suo2018characterizing
+Warning--empty publisher in tax2018human
+Warning--empty address in tax2018human
+Warning--empty publisher in ur2014practical
+Warning--empty address in ur2014practical
+Warning--empty publisher in wang2019panthera
+Warning--empty address in wang2019panthera
+Warning--empty publisher in wu2016behavior
+Warning--empty address in wu2016behavior
+Warning--empty publisher in wu2020platinum
+Warning--empty address in wu2020platinum
+Warning--empty publisher in xu2016user
+Warning--empty address in xu2016user
+Warning--empty publisher in xu2019experimental
+Warning--empty address in xu2019experimental
+Warning--page numbers missing in both pages and numpages fields in xu2019experimental
+Warning--empty publisher in yang2020improving
+Warning--empty address in yang2020improving
+You've used 54 entries,
+            5959 wiz_defined-function locations,
+            1778 strings with 28045 characters,
+and the built_in function-call counts, 67775 in all, are:
+= -- 8059
+> -- 2829
+< -- 0
++ -- 946
+- -- 948
+* -- 4998
+:= -- 7021
+add.period$ -- 273
+call.type$ -- 54
+change.case$ -- 426
+chr.to.int$ -- 54
+cite$ -- 135
+duplicate$ -- 5870
+empty$ -- 4132
+format.name$ -- 1124
+if$ -- 16281
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 216
+newline$ -- 456
+num.names$ -- 424
+pop$ -- 2497
+preamble$ -- 1
+purify$ -- 876
+quote$ -- 0
+skip$ -- 2054
+stack$ -- 0
+substring$ -- 4731
+swap$ -- 592
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1354
+warning$ -- 77
+while$ -- 404
+width$ -- 0
+write$ -- 940
+(There were 77 warnings)
