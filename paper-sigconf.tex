@@ -333,6 +333,22 @@ candidate generation and prune steps that occur in the Apriori-type algorithms a
 frequent sequences into a frequent pattern tree and
 then dividing this tree into a set of projected databases, which are mined separately\cite{han2000mining}.
 
+PrefixSpan use \emph{projected databases}, A subsequence
+$\alpha'$ of sequence $\alpha$ is called a projection of $\alpha$ with respect to prefix $\beta$ if and only
+if 1) $\alpha'$ has prefix $\beta$, and 2) there exists no proper supersequence $\alpha''$ of $\alpha'$ such that
+$\alpha''$ is a subsequence of $\alpha'$ and also has prefix $\beta$. PrefixSpan works based
+on recursively constructing the patterns by growing on the prefix, and simultaneously,
+restricting the search to projected databases. This way, the search space is reduced at
+each step, allowing for better performance in the presence of small support thresholds.
+
+The major benefit of this approach is that no candidate sequences need to be generated or tested that do not exist in a projected database. That is, PrefixSpan only
+grows longer sequential patterns from shorter frequent ones, thus making the search
+space smaller. This results in the major cost being the construction of the projected
+databases, which can be alleviated by two optimizations. The first, by using a bilevel
+projection method to reduce the size and number of the projected databases, and second
+a pseudo-projection method to reduce the cost when a projected database can be wholly
+contained in main memory.
+
 
 Modern big data processing frameworks, including Hadoop, Spark\cite{zaharia2010spark} and
 Flink\cite{carbone2015apache}, were all implemented in object-oriented languages such as Scala and Java, due to 
