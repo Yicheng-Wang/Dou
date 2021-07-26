@@ -28,7 +28,37 @@
 \citation{luo2020arbee,lien2016soli}
 \@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
-\citation{shvachko2010hadoop}
+\citation{agrawal1993mining,agrawal1994fast}
+\citation{agrawal1995mining}
+\citation{srikant1996mining}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Apriori}{2}{section.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Apriori algorithm\relax }}{2}{algorithm.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Apriori-Based Algorithms}{2}{subsection.2.1}\protected@file@percent }
+\citation{masseglia1998psp}
+\citation{rashidi2009keeping}
+\citation{rashidi2009keeping}
+\citation{witten2005practical}
+\citation{jakkula2007learning,jakkula2007mining}
+\citation{rashidi2009keeping}
+\citation{aztiria2012discovering}
+\citation{zaki2001spade}
+\citation{shenoy2000turbo}
+\citation{zaki2001spade}
+\citation{zaki2001spade}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Using Apriori-type algorithm to find rules\citep  {rashidi2009keeping}\relax }}{3}{figure.caption.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Apriori-Based Applications}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}SPADE}{3}{section.3}\protected@file@percent }
+\citation{zaki2000sequence}
+\citation{ayres2002sequential}
+\citation{orlando2004new}
+\citation{chen2013detecting}
+\citation{ding2015sequential}
+\citation{mao2019anomalous}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Vertical Formatting Data Layout\citep  {zaki2001spade}\relax }}{4}{figure.caption.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}SPADE-like Algorithm}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}SPADE-base Applications}{4}{subsection.3.2}\protected@file@percent }
+\citation{han2001prefixspan}
+\citation{han2000mining}
 \citation{zaharia2010spark}
 \citation{carbone2015apache}
 \citation{stackoverflow,bu2013bloat}
@@ -45,7 +75,7 @@
 \citation{harris2000dynamic,jump2004dynamic}
 \citation{blackburn2001pretenuring,bruno2019runtime,bruno2017polm2}
 \citation{bruno2017ng2c}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Motivation}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}PrefixSpan}{5}{section.4}\protected@file@percent }
 \citation{nguyen2015facade,navasca2019gerenuk,bu2013bloat,nguyen2016yak}
 \citation{navasca2019gerenuk,bu2013bloat}
 \citation{navasca2019gerenuk,nguyen2018skyway}
@@ -54,83 +84,102 @@
 \citation{UnsafeRemove}
 \citation{MinorGCLong}
 \citation{xu2019experimental}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Data Path}{3}{subsection.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Memory Pages}{3}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Desgin and Implementation}{3}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Pick Out Long-Lived Objects}{3}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Motivation}{6}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Data Path}{6}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Memory Pages}{6}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Desgin and Implementation}{6}{section.6}\protected@file@percent }
 \citation{wang2019panthera}
 \citation{xu2019experimental,suo2018characterizing,yu2016performance,li2019scissorgc}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Memory Page in Modern Big Data Processing Framworks.\relax }}{4}{figure.caption.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Memory Block of Spark}}}{4}{figure.caption.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Memory Segment of Flink}}}{4}{figure.caption.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}GC Colloctor Choice}{4}{subsection.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Memory Page in Modern Big Data Processing Framworks.\relax }}{7}{figure.caption.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Memory Block of Spark}}}{7}{figure.caption.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Memory Segment of Flink}}}{7}{figure.caption.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Pick Out Long-Lived Objects}{7}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}GC Colloctor Choice}{7}{subsection.6.2}\protected@file@percent }
 \bibstyle{ACM-Reference-Format}
 \bibdata{mybib}
 \bibcite{IFTTT}{{1}{[n.d.]}{{IFT}}{{??}}}
-\bibcite{antonakakis2017understanding}{{2}{2017}{{Antonakakis et~al\mbox  {.}}}{{Antonakakis, April, Bailey, Bernhard, Bursztein, Cochran, Durumeric, Halderman, Invernizzi, Kallitsis, et~al\mbox  {.}}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Heap distribution under Parallel scavenge GC and G1 GC algorithm\relax }}{5}{figure.caption.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Memory Allocation Buffer}{5}{subsection.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Thread Local Allocation Buffer\relax }}{5}{figure.caption.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation}{5}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Evaluation Setup}{5}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}TLAB Size}{5}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}GC Pause Time}{5}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{5}{section*.9}\protected@file@percent }
-\bibcite{blackburn2001pretenuring}{{3}{2001}{{Blackburn et~al\mbox  {.}}}{{Blackburn, Singhai, Hertz, McKinely, and Moss}}}
-\bibcite{bruno2017polm2}{{4}{2017}{{Bruno and Ferreira}}{{Bruno and Ferreira}}}
-\bibcite{bruno2018study}{{5}{2018}{{Bruno and Ferreira}}{{Bruno and Ferreira}}}
-\bibcite{bruno2017ng2c}{{6}{2017}{{Bruno et~al\mbox  {.}}}{{Bruno, Oliveira, and Ferreira}}}
-\bibcite{bruno2019runtime}{{7}{2019}{{Bruno et~al\mbox  {.}}}{{Bruno, Patricio, Sim{\~a}o, Veiga, and Ferreira}}}
-\bibcite{bu2013bloat}{{8}{2013}{{Bu et~al\mbox  {.}}}{{Bu, Borkar, Xu, and Carey}}}
-\bibcite{carbone2015apache}{{9}{2015}{{Carbone et~al\mbox  {.}}}{{Carbone, Katsifodimos, Ewen, Markl, Haridi, and Tzoumas}}}
-\bibcite{cohen2015data}{{10}{2015}{{Cohen and Petrank}}{{Cohen and Petrank}}}
-\bibcite{detlefs2004garbage}{{11}{2004}{{Detlefs et~al\mbox  {.}}}{{Detlefs, Flood, Heller, and Printezis}}}
-\bibcite{chenSM}{{12}{2017}{{Ding and ~}}{{Ding and ~}}}
-\bibcite{UnsafeRemove}{{13}{[n.d.]}{{FLINK-2485}}{{FLINK-2485}}}
-\bibcite{ghiani2017personalization}{{14}{2017}{{Ghiani et~al\mbox  {.}}}{{Ghiani, Manca, Patern{\`o}, and Santoro}}}
-\bibcite{gidra2013study}{{15}{2013}{{Gidra et~al\mbox  {.}}}{{Gidra, Thomas, Sopena, and Shapiro}}}
-\bibcite{harris2000dynamic}{{16}{2000}{{Harris}}{{Harris}}}
-\bibcite{huang2015supporting}{{17}{2015}{{Huang and Cakmak}}{{Huang and Cakmak}}}
-\bibcite{jakkula2007mining}{{18}{2007}{{Jakkula and Cook}}{{Jakkula and Cook}}}
-\bibcite{MinorGCLong}{{19}{[n.d.]}{{JR}}{{JR}}}
-\bibcite{jump2004dynamic}{{20}{2004}{{Jump et~al\mbox  {.}}}{{Jump, Blackburn, and McKinley}}}
-\bibcite{kolokasis2020say}{{21}{2020}{{Kolokasis et~al\mbox  {.}}}{{Kolokasis, Papagiannis, Pratikakis, Bilas, and Zakkak}}}
-\bibcite{levy2017microsoft}{{22}{2017}{{Levy}}{{Levy}}}
-\bibcite{li2019scissorgc}{{23}{2019}{{Li et~al\mbox  {.}}}{{Li, Wu, Zang, and Chen}}}
-\bibcite{lien2016soli}{{24}{2016}{{Lien et~al\mbox  {.}}}{{Lien, Gillian, Karagozler, Amihood, Schwesig, Olson, Raja, and Poupyrev}}}
-\bibcite{lu2016lifetime}{{25}{2016}{{Lu et~al\mbox  {.}}}{{Lu, Shi, Zhou, Zhang, Jin, Pei, He, and Geng}}}
-\bibcite{luo2020arbee}{{26}{2020}{{Luo et~al\mbox  {.}}}{{Luo, Ye, Adams, Li, Newman, and Wang}}}
-\bibcite{maas2017return}{{27}{2017}{{Maas et~al\mbox  {.}}}{{Maas, Asanovi{\'c}, and Kubiatowicz}}}
-\bibcite{mastrangelo2015use}{{28}{2015}{{Mastrangelo et~al\mbox  {.}}}{{Mastrangelo, Ponzanelli, Mocci, Lanza, Hauswirth, and Nystrom}}}
-\bibcite{mikolov2016roadmap}{{29}{2016}{{Mikolov et~al\mbox  {.}}}{{Mikolov, Joulin, and Baroni}}}
-\bibcite{minor2015data}{{30}{2015}{{Minor et~al\mbox  {.}}}{{Minor, Doppa, and Cook}}}
-\bibcite{minor2017learning}{{31}{2017}{{Minor et~al\mbox  {.}}}{{Minor, Doppa, and Cook}}}
-\bibcite{mohmed2020enhanced}{{32}{2020}{{Mohmed et~al\mbox  {.}}}{{Mohmed, Lotfi, and Pourabdollah}}}
-\bibcite{mossberg2014smartthings}{{33}{2014}{{Mossberg}}{{Mossberg}}}
-\bibcite{navasca2019gerenuk}{{34}{2019}{{Navasca et~al\mbox  {.}}}{{Navasca, Cai, Nguyen, Demsky, Lu, Kim, and Xu}}}
-\bibcite{nazerfard2012bayesian}{{35}{2012}{{Nazerfard and Cook}}{{Nazerfard and Cook}}}
-\bibcite{nguyen2018skyway}{{36}{2018}{{Nguyen et~al\mbox  {.}}}{{Nguyen, Fang, Navasca, Xu, Demsky, and Lu}}}
-\bibcite{nguyen2016yak}{{37}{2016}{{Nguyen et~al\mbox  {.}}}{{Nguyen, Fang, Xu, Demsky, Lu, Alamian, and Mutlu}}}
-\bibcite{nguyen2015facade}{{38}{2015}{{Nguyen et~al\mbox  {.}}}{{Nguyen, Wang, Bu, Fang, Hu, and Xu}}}
-\bibcite{weakgenerational}{{39}{[n.d.]}{{Oracle}}{{Oracle}}}
-\bibcite{pentland1999modeling}{{40}{1999}{{Pentland and Liu}}{{Pentland and Liu}}}
-\bibcite{stackoverflow}{{41}{[n.d.]}{{Philip}}{{Philip}}}
-\bibcite{shvachko2010hadoop}{{42}{2010}{{Shvachko et~al\mbox  {.}}}{{Shvachko, Kuang, Radia, and Chansler}}}
-\bibcite{Tungsten}{{43}{[n.d.]}{{Spark}}{{Spark}}}
-\bibcite{suo2018characterizing}{{44}{2018}{{Suo et~al\mbox  {.}}}{{Suo, Rao, Jiang, and Srisa-an}}}
-\bibcite{tax2018human}{{45}{2018}{{Tax}}{{Tax}}}
-\bibcite{ur2014practical}{{46}{2014}{{Ur et~al\mbox  {.}}}{{Ur, McManus, Pak Yong~Ho, and Littman}}}
-\bibcite{wang2019panthera}{{47}{2019}{{Wang et~al\mbox  {.}}}{{Wang, Cui, Cao, Zigman, Volos, Mutlu, Lv, Feng, and Xu}}}
-\bibcite{wu2016behavior}{{48}{2016}{{Wu et~al\mbox  {.}}}{{Wu, Zhang, Lu, Gu, and Gu}}}
-\bibcite{wu2020platinum}{{49}{2020}{{Wu et~al\mbox  {.}}}{{Wu, Zhao, Yang, Li, Chen, Zang, Guan, Li, Lu, and Zhang}}}
-\bibcite{xu2016user}{{50}{2016}{{Xu et~al\mbox  {.}}}{{Xu, Liu, Li, Zhang, and Shen}}}
-\bibcite{xu2019experimental}{{51}{2019}{{Xu et~al\mbox  {.}}}{{Xu, Guo, Dou, Wang, and Wei}}}
-\bibcite{yang2020improving}{{52}{2020}{{Yang et~al\mbox  {.}}}{{Yang, {\"O}sterlund, and Wrigstad}}}
-\bibcite{yu2016performance}{{53}{2016}{{Yu et~al\mbox  {.}}}{{Yu, Lei, Zhang, Chen, and Zang}}}
-\bibcite{zaharia2010spark}{{54}{2010}{{Zaharia et~al\mbox  {.}}}{{Zaharia, Chowdhury, Franklin, Shenker, Stoica, et~al\mbox  {.}}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Heap distribution under Parallel scavenge GC and G1 GC algorithm\relax }}{8}{figure.caption.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Memory Allocation Buffer}{8}{subsection.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Thread Local Allocation Buffer\relax }}{8}{figure.caption.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Evaluation}{8}{section.7}\protected@file@percent }
+\bibcite{agrawal1993mining}{{2}{1993}{{Agrawal et~al\mbox  {.}}}{{Agrawal, Imieli{\'n}ski, and Swami}}}
+\bibcite{agrawal1995mining}{{3}{1995}{{Agrawal and Srikant}}{{Agrawal and Srikant}}}
+\bibcite{agrawal1994fast}{{4}{1994}{{Agrawal et~al\mbox  {.}}}{{Agrawal, Srikant, et~al\mbox  {.}}}}
+\bibcite{antonakakis2017understanding}{{5}{2017}{{Antonakakis et~al\mbox  {.}}}{{Antonakakis, April, Bailey, Bernhard, Bursztein, Cochran, Durumeric, Halderman, Invernizzi, Kallitsis, et~al\mbox  {.}}}}
+\bibcite{ayres2002sequential}{{6}{2002}{{Ayres et~al\mbox  {.}}}{{Ayres, Flannick, Gehrke, and Yiu}}}
+\bibcite{aztiria2012discovering}{{7}{2012}{{Aztiria et~al\mbox  {.}}}{{Aztiria, Augusto, Basagoiti, Izaguirre, and Cook}}}
+\bibcite{blackburn2001pretenuring}{{8}{2001}{{Blackburn et~al\mbox  {.}}}{{Blackburn, Singhai, Hertz, McKinely, and Moss}}}
+\bibcite{bruno2017polm2}{{9}{2017}{{Bruno and Ferreira}}{{Bruno and Ferreira}}}
+\bibcite{bruno2018study}{{10}{2018}{{Bruno and Ferreira}}{{Bruno and Ferreira}}}
+\bibcite{bruno2017ng2c}{{11}{2017}{{Bruno et~al\mbox  {.}}}{{Bruno, Oliveira, and Ferreira}}}
+\bibcite{bruno2019runtime}{{12}{2019}{{Bruno et~al\mbox  {.}}}{{Bruno, Patricio, Sim{\~a}o, Veiga, and Ferreira}}}
+\bibcite{bu2013bloat}{{13}{2013}{{Bu et~al\mbox  {.}}}{{Bu, Borkar, Xu, and Carey}}}
+\bibcite{carbone2015apache}{{14}{2015}{{Carbone et~al\mbox  {.}}}{{Carbone, Katsifodimos, Ewen, Markl, Haridi, and Tzoumas}}}
+\bibcite{chen2013detecting}{{15}{2013}{{Chen et~al\mbox  {.}}}{{Chen, Chu, Tsao, and Tsai}}}
+\bibcite{cohen2015data}{{16}{2015}{{Cohen and Petrank}}{{Cohen and Petrank}}}
+\bibcite{detlefs2004garbage}{{17}{2004}{{Detlefs et~al\mbox  {.}}}{{Detlefs, Flood, Heller, and Printezis}}}
+\bibcite{chenSM}{{18}{2017}{{Ding and ~}}{{Ding and ~}}}
+\bibcite{ding2015sequential}{{19}{2015}{{Ding et~al\mbox  {.}}}{{Ding, Borges, Neumann, and Beigl}}}
+\bibcite{UnsafeRemove}{{20}{[n.d.]}{{FLINK-2485}}{{FLINK-2485}}}
+\bibcite{ghiani2017personalization}{{21}{2017}{{Ghiani et~al\mbox  {.}}}{{Ghiani, Manca, Patern{\`o}, and Santoro}}}
+\bibcite{gidra2013study}{{22}{2013}{{Gidra et~al\mbox  {.}}}{{Gidra, Thomas, Sopena, and Shapiro}}}
+\bibcite{han2001prefixspan}{{23}{[n.d.]}{{Han}}{{Han}}}
+\bibcite{han2000mining}{{24}{2000}{{Han et~al\mbox  {.}}}{{Han, Pei, and Yin}}}
+\bibcite{harris2000dynamic}{{25}{2000}{{Harris}}{{Harris}}}
+\bibcite{huang2015supporting}{{26}{2015}{{Huang and Cakmak}}{{Huang and Cakmak}}}
+\bibcite{jakkula2007learning}{{27}{2007a}{{Jakkula and Cook}}{{Jakkula and Cook}}}
+\bibcite{jakkula2007mining}{{28}{2007b}{{Jakkula and Cook}}{{Jakkula and Cook}}}
+\bibcite{MinorGCLong}{{29}{[n.d.]}{{JR}}{{JR}}}
+\bibcite{jump2004dynamic}{{30}{2004}{{Jump et~al\mbox  {.}}}{{Jump, Blackburn, and McKinley}}}
+\bibcite{kolokasis2020say}{{31}{2020}{{Kolokasis et~al\mbox  {.}}}{{Kolokasis, Papagiannis, Pratikakis, Bilas, and Zakkak}}}
+\bibcite{levy2017microsoft}{{32}{2017}{{Levy}}{{Levy}}}
+\bibcite{li2019scissorgc}{{33}{2019}{{Li et~al\mbox  {.}}}{{Li, Wu, Zang, and Chen}}}
+\bibcite{lien2016soli}{{34}{2016}{{Lien et~al\mbox  {.}}}{{Lien, Gillian, Karagozler, Amihood, Schwesig, Olson, Raja, and Poupyrev}}}
+\bibcite{lu2016lifetime}{{35}{2016}{{Lu et~al\mbox  {.}}}{{Lu, Shi, Zhou, Zhang, Jin, Pei, He, and Geng}}}
+\bibcite{luo2020arbee}{{36}{2020}{{Luo et~al\mbox  {.}}}{{Luo, Ye, Adams, Li, Newman, and Wang}}}
+\bibcite{maas2017return}{{37}{2017}{{Maas et~al\mbox  {.}}}{{Maas, Asanovi{\'c}, and Kubiatowicz}}}
+\bibcite{mao2019anomalous}{{38}{2019}{{Mao et~al\mbox  {.}}}{{Mao, Zhu, Bian, Lin, and Liu}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Evaluation Setup}{9}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}TLAB Size}{9}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}GC Pause Time}{9}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{9}{section*.11}\protected@file@percent }
+\bibcite{masseglia1998psp}{{39}{1998}{{Masseglia et~al\mbox  {.}}}{{Masseglia, Cathala, and Poncelet}}}
+\bibcite{mastrangelo2015use}{{40}{2015}{{Mastrangelo et~al\mbox  {.}}}{{Mastrangelo, Ponzanelli, Mocci, Lanza, Hauswirth, and Nystrom}}}
+\bibcite{mikolov2016roadmap}{{41}{2016}{{Mikolov et~al\mbox  {.}}}{{Mikolov, Joulin, and Baroni}}}
+\bibcite{minor2015data}{{42}{2015}{{Minor et~al\mbox  {.}}}{{Minor, Doppa, and Cook}}}
+\bibcite{minor2017learning}{{43}{2017}{{Minor et~al\mbox  {.}}}{{Minor, Doppa, and Cook}}}
+\bibcite{mohmed2020enhanced}{{44}{2020}{{Mohmed et~al\mbox  {.}}}{{Mohmed, Lotfi, and Pourabdollah}}}
+\bibcite{mossberg2014smartthings}{{45}{2014}{{Mossberg}}{{Mossberg}}}
+\bibcite{navasca2019gerenuk}{{46}{2019}{{Navasca et~al\mbox  {.}}}{{Navasca, Cai, Nguyen, Demsky, Lu, Kim, and Xu}}}
+\bibcite{nazerfard2012bayesian}{{47}{2012}{{Nazerfard and Cook}}{{Nazerfard and Cook}}}
+\bibcite{nguyen2018skyway}{{48}{2018}{{Nguyen et~al\mbox  {.}}}{{Nguyen, Fang, Navasca, Xu, Demsky, and Lu}}}
+\bibcite{nguyen2016yak}{{49}{2016}{{Nguyen et~al\mbox  {.}}}{{Nguyen, Fang, Xu, Demsky, Lu, Alamian, and Mutlu}}}
+\bibcite{nguyen2015facade}{{50}{2015}{{Nguyen et~al\mbox  {.}}}{{Nguyen, Wang, Bu, Fang, Hu, and Xu}}}
+\bibcite{weakgenerational}{{51}{[n.d.]}{{Oracle}}{{Oracle}}}
+\bibcite{orlando2004new}{{52}{2004}{{Orlando et~al\mbox  {.}}}{{Orlando, Perego, and Silvestri}}}
+\bibcite{pentland1999modeling}{{53}{1999}{{Pentland and Liu}}{{Pentland and Liu}}}
+\bibcite{stackoverflow}{{54}{[n.d.]}{{Philip}}{{Philip}}}
+\bibcite{rashidi2009keeping}{{55}{2009}{{Rashidi and Cook}}{{Rashidi and Cook}}}
+\bibcite{shenoy2000turbo}{{56}{2000}{{Shenoy et~al\mbox  {.}}}{{Shenoy, Haritsa, Sudarshan, Bhalotia, Bawa, and Shah}}}
+\bibcite{Tungsten}{{57}{[n.d.]}{{Spark}}{{Spark}}}
+\bibcite{srikant1996mining}{{58}{1996}{{Srikant and Agrawal}}{{Srikant and Agrawal}}}
+\bibcite{suo2018characterizing}{{59}{2018}{{Suo et~al\mbox  {.}}}{{Suo, Rao, Jiang, and Srisa-an}}}
+\bibcite{tax2018human}{{60}{2018}{{Tax}}{{Tax}}}
+\bibcite{ur2014practical}{{61}{2014}{{Ur et~al\mbox  {.}}}{{Ur, McManus, Pak Yong~Ho, and Littman}}}
+\bibcite{wang2019panthera}{{62}{2019}{{Wang et~al\mbox  {.}}}{{Wang, Cui, Cao, Zigman, Volos, Mutlu, Lv, Feng, and Xu}}}
+\bibcite{witten2005practical}{{63}{2005}{{Witten et~al\mbox  {.}}}{{Witten, Frank, Hall, Pal, and DATA}}}
+\bibcite{wu2016behavior}{{64}{2016}{{Wu et~al\mbox  {.}}}{{Wu, Zhang, Lu, Gu, and Gu}}}
+\bibcite{wu2020platinum}{{65}{2020}{{Wu et~al\mbox  {.}}}{{Wu, Zhao, Yang, Li, Chen, Zang, Guan, Li, Lu, and Zhang}}}
+\bibcite{xu2016user}{{66}{2016}{{Xu et~al\mbox  {.}}}{{Xu, Liu, Li, Zhang, and Shen}}}
+\bibcite{xu2019experimental}{{67}{2019}{{Xu et~al\mbox  {.}}}{{Xu, Guo, Dou, Wang, and Wei}}}
+\bibcite{yang2020improving}{{68}{2020}{{Yang et~al\mbox  {.}}}{{Yang, {\"O}sterlund, and Wrigstad}}}
+\bibcite{yu2016performance}{{69}{2016}{{Yu et~al\mbox  {.}}}{{Yu, Lei, Zhang, Chen, and Zang}}}
+\bibcite{zaharia2010spark}{{70}{2010}{{Zaharia et~al\mbox  {.}}}{{Zaharia, Chowdhury, Franklin, Shenker, Stoica, et~al\mbox  {.}}}}
+\bibcite{zaki2000sequence}{{71}{2000}{{Zaki}}{{Zaki}}}
+\bibcite{zaki2001spade}{{72}{2001}{{Zaki}}{{Zaki}}}
 \newlabel{tocindent-1}{0pt}
 \newlabel{tocindent0}{0pt}
 \newlabel{tocindent1}{4.65pt}
 \newlabel{tocindent2}{11.49998pt}
 \newlabel{tocindent3}{0pt}
-\newlabel{TotPages}{{7}{7}{}{page.7}{}}
+\newlabel{TotPages}{{10}{10}{}{page.10}{}}

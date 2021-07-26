@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{54}
+\begin{thebibliography}{72}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -47,6 +47,42 @@
 \shownote{\url{https://ifttt.com}.}
 
 
+\bibitem[\protect\citeauthoryear{Agrawal, Imieli{\'n}ski, and Swami}{Agrawal
+  et~al\mbox{.}}{1993}]%
+        {agrawal1993mining}
+\bibfield{author}{\bibinfo{person}{Rakesh Agrawal}, \bibinfo{person}{Tomasz
+  Imieli{\'n}ski}, {and} \bibinfo{person}{Arun Swami}.}
+  \bibinfo{year}{1993}\natexlab{}.
+\newblock \showarticletitle{Mining association rules between sets of items in
+  large databases}. In \bibinfo{booktitle}{\emph{Proceedings of the 1993 ACM
+  SIGMOD international conference on Management of data}}.
+  \bibinfo{pages}{207--216}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Agrawal and Srikant}{Agrawal and
+  Srikant}{1995}]%
+        {agrawal1995mining}
+\bibfield{author}{\bibinfo{person}{Rakesh Agrawal} {and}
+  \bibinfo{person}{Ramakrishnan Srikant}.} \bibinfo{year}{1995}\natexlab{}.
+\newblock \showarticletitle{Mining sequential patterns}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the eleventh international
+  conference on data engineering}}. IEEE, \bibinfo{pages}{3--14}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Agrawal, Srikant, et~al\mbox{.}}{Agrawal
+  et~al\mbox{.}}{1994}]%
+        {agrawal1994fast}
+\bibfield{author}{\bibinfo{person}{Rakesh Agrawal},
+  \bibinfo{person}{Ramakrishnan Srikant}, {et~al\mbox{.}}}
+  \bibinfo{year}{1994}\natexlab{}.
+\newblock \showarticletitle{Fast algorithms for mining association rules}. In
+  \bibinfo{booktitle}{\emph{Proc. 20th int. conf. very large data bases,
+  VLDB}}, Vol.~\bibinfo{volume}{1215}. Citeseer, \bibinfo{pages}{487--499}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Antonakakis, April, Bailey, Bernhard,
   Bursztein, Cochran, Durumeric, Halderman, Invernizzi, Kallitsis,
   et~al\mbox{.}}{Antonakakis et~al\mbox{.}}{2017}]%
@@ -60,6 +96,34 @@
 \newblock \showarticletitle{Understanding the mirai botnet}. In
   \bibinfo{booktitle}{\emph{26th $\{$USENIX$\}$ security symposium
   ($\{$USENIX$\}$ Security 17)}}. \bibinfo{pages}{1093--1110}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Ayres, Flannick, Gehrke, and Yiu}{Ayres
+  et~al\mbox{.}}{2002}]%
+        {ayres2002sequential}
+\bibfield{author}{\bibinfo{person}{Jay Ayres}, \bibinfo{person}{Jason
+  Flannick}, \bibinfo{person}{Johannes Gehrke}, {and} \bibinfo{person}{Tomi
+  Yiu}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Sequential pattern mining using a bitmap
+  representation}. In \bibinfo{booktitle}{\emph{Proceedings of the eighth ACM
+  SIGKDD international conference on Knowledge discovery and data mining}}.
+  \bibinfo{pages}{429--435}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Aztiria, Augusto, Basagoiti, Izaguirre, and
+  Cook}{Aztiria et~al\mbox{.}}{2012}]%
+        {aztiria2012discovering}
+\bibfield{author}{\bibinfo{person}{Asier Aztiria}, \bibinfo{person}{Juan~Carlos
+  Augusto}, \bibinfo{person}{Rosa Basagoiti}, \bibinfo{person}{Alberto
+  Izaguirre}, {and} \bibinfo{person}{Diane~J Cook}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Discovering frequent user--environment interactions
+  in intelligent environments}.
+\newblock \bibinfo{journal}{\emph{Personal and Ubiquitous Computing}}
+  \bibinfo{volume}{16}, \bibinfo{number}{1} (\bibinfo{year}{2012}),
+  \bibinfo{pages}{91--103}.
 \newblock
 
 
@@ -154,6 +218,19 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Chen, Chu, Tsao, and Tsai}{Chen
+  et~al\mbox{.}}{2013}]%
+        {chen2013detecting}
+\bibfield{author}{\bibinfo{person}{Yung-Chi Chen}, \bibinfo{person}{Chun-Mei
+  Chu}, \bibinfo{person}{Shiao-Li Tsao}, {and} \bibinfo{person}{Tzung-Cheng
+  Tsai}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Detecting users' behaviors based on nonintrusive
+  load monitoring technologies}. In \bibinfo{booktitle}{\emph{2013 10th IEEE
+  International Conference on Networking, Sensing and Control (ICNSC)}}. IEEE,
+  \bibinfo{pages}{804--809}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Cohen and Petrank}{Cohen and Petrank}{2015}]%
         {cohen2015data}
 \bibfield{author}{\bibinfo{person}{Nachshon Cohen} {and} \bibinfo{person}{Erez
@@ -184,6 +261,19 @@
 \newblock \bibinfo{journal}{\emph{Journal of Computer Application}}
   \bibinfo{volume}{37}, \bibinfo{number}{2} (\bibinfo{year}{2017}),
   \bibinfo{pages}{305--310}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Ding, Borges, Neumann, and Beigl}{Ding
+  et~al\mbox{.}}{2015}]%
+        {ding2015sequential}
+\bibfield{author}{\bibinfo{person}{Yong Ding}, \bibinfo{person}{Julio Borges},
+  \bibinfo{person}{Martin~A Neumann}, {and} \bibinfo{person}{Michael Beigl}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Sequential pattern mining—A study to understand
+  daily activity patterns for load forecasting enhancement}. In
+  \bibinfo{booktitle}{\emph{2015 IEEE First International Smart Cities
+  Conference (ISC2)}}. IEEE, \bibinfo{pages}{1--6}.
 \newblock
 
 
@@ -225,6 +315,26 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Han}{Han}{[n.d.]}]%
+        {han2001prefixspan}
+\bibfield{author}{\bibinfo{person}{Jiawei Han}.}
+  \bibinfo{year}{[n.d.]}\natexlab{}.
+\newblock \showarticletitle{Prefixspan: Mining sequential patterns efficiently
+  by prefix-projected pattern growth}. Citeseer.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Han, Pei, and Yin}{Han et~al\mbox{.}}{2000}]%
+        {han2000mining}
+\bibfield{author}{\bibinfo{person}{Jiawei Han}, \bibinfo{person}{Jian Pei},
+  {and} \bibinfo{person}{Yiwen Yin}.} \bibinfo{year}{2000}\natexlab{}.
+\newblock \showarticletitle{Mining frequent patterns without candidate
+  generation}.
+\newblock \bibinfo{journal}{\emph{ACM sigmod record}} \bibinfo{volume}{29},
+  \bibinfo{number}{2} (\bibinfo{year}{2000}), \bibinfo{pages}{1--12}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Harris}{Harris}{2000}]%
         {harris2000dynamic}
 \bibfield{author}{\bibinfo{person}{Timothy~L Harris}.}
@@ -246,10 +356,20 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Jakkula and Cook}{Jakkula and Cook}{2007}]%
+\bibitem[\protect\citeauthoryear{Jakkula and Cook}{Jakkula and Cook}{2007a}]%
+        {jakkula2007learning}
+\bibfield{author}{\bibinfo{person}{Vikramaditya Jakkula} {and}
+  \bibinfo{person}{Diane~J Cook}.} \bibinfo{year}{2007}\natexlab{a}.
+\newblock \showarticletitle{Learning temporal relations in smart home data}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the Second International Conference
+  on Technology and Aging, Canada}}, Vol.~\bibinfo{volume}{33}. Citeseer.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Jakkula and Cook}{Jakkula and Cook}{2007b}]%
         {jakkula2007mining}
 \bibfield{author}{\bibinfo{person}{Vikramaditya Jakkula} {and}
-  \bibinfo{person}{Diane~J Cook}.} \bibinfo{year}{2007}\natexlab{}.
+  \bibinfo{person}{Diane~J Cook}.} \bibinfo{year}{2007}\natexlab{b}.
 \newblock \showarticletitle{Mining sensor data in smart environment for
   temporal activity prediction}.
 \newblock \bibinfo{journal}{\emph{Poster session at the ACM SIGKDD, San Jose,
@@ -372,6 +492,32 @@
   runtime system for the cloud 3.0 era}. In
   \bibinfo{booktitle}{\emph{Proceedings of the 16th Workshop on Hot Topics in
   Operating Systems}}. \bibinfo{pages}{138--143}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mao, Zhu, Bian, Lin, and Liu}{Mao
+  et~al\mbox{.}}{2019}]%
+        {mao2019anomalous}
+\bibfield{author}{\bibinfo{person}{Jian Mao}, \bibinfo{person}{Shishi Zhu},
+  \bibinfo{person}{Jingdong Bian}, \bibinfo{person}{Qixiao Lin}, {and}
+  \bibinfo{person}{Jianwei Liu}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Anomalous power-usage behavior detection from smart
+  home wireless communications}.
+\newblock \bibinfo{journal}{\emph{Journal of Communications and Information
+  Networks}} \bibinfo{volume}{4}, \bibinfo{number}{1} (\bibinfo{year}{2019}),
+  \bibinfo{pages}{13--23}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Masseglia, Cathala, and Poncelet}{Masseglia
+  et~al\mbox{.}}{1998}]%
+        {masseglia1998psp}
+\bibfield{author}{\bibinfo{person}{Florent Masseglia},
+  \bibinfo{person}{Fabienne Cathala}, {and} \bibinfo{person}{Pascal Poncelet}.}
+  \bibinfo{year}{1998}\natexlab{}.
+\newblock \showarticletitle{The PSP approach for mining sequential patterns}.
+  In \bibinfo{booktitle}{\emph{European Symposium on Principles of Data Mining
+  and Knowledge Discovery}}. Springer, \bibinfo{pages}{176--184}.
 \newblock
 
 
@@ -532,6 +678,18 @@
 \shownote{\url{https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/generations.html.}}
 
 
+\bibitem[\protect\citeauthoryear{Orlando, Perego, and Silvestri}{Orlando
+  et~al\mbox{.}}{2004}]%
+        {orlando2004new}
+\bibfield{author}{\bibinfo{person}{Salvatore Orlando},
+  \bibinfo{person}{Raffaele Perego}, {and} \bibinfo{person}{Claudio
+  Silvestri}.} \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{A new algorithm for gap constrained sequence
+  mining}. In \bibinfo{booktitle}{\emph{Proceedings of the 2004 ACM symposium
+  on Applied computing}}. \bibinfo{pages}{540--547}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Pentland and Liu}{Pentland and Liu}{1999}]%
         {pentland1999modeling}
 \bibfield{author}{\bibinfo{person}{Alex Pentland} {and} \bibinfo{person}{Andrew
@@ -553,15 +711,28 @@
 \shownote{\url{https://stackoverflow.com/questions/38965787/spark-executor-gc-taking-long}.}
 
 
-\bibitem[\protect\citeauthoryear{Shvachko, Kuang, Radia, and Chansler}{Shvachko
-  et~al\mbox{.}}{2010}]%
-        {shvachko2010hadoop}
-\bibfield{author}{\bibinfo{person}{Konstantin Shvachko},
-  \bibinfo{person}{Hairong Kuang}, \bibinfo{person}{Sanjay Radia}, {and}
-  \bibinfo{person}{Robert Chansler}.} \bibinfo{year}{2010}\natexlab{}.
-\newblock \showarticletitle{The hadoop distributed file system}. In
-  \bibinfo{booktitle}{\emph{2010 IEEE 26th symposium on mass storage systems
-  and technologies (MSST)}}. Ieee, \bibinfo{pages}{1--10}.
+\bibitem[\protect\citeauthoryear{Rashidi and Cook}{Rashidi and Cook}{2009}]%
+        {rashidi2009keeping}
+\bibfield{author}{\bibinfo{person}{Parisa Rashidi} {and}
+  \bibinfo{person}{Diane~J Cook}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Keeping the resident in the loop: Adapting the
+  smart home to the user}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on systems, man, and
+  cybernetics-part A: systems and humans}} \bibinfo{volume}{39},
+  \bibinfo{number}{5} (\bibinfo{year}{2009}), \bibinfo{pages}{949--959}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Shenoy, Haritsa, Sudarshan, Bhalotia, Bawa,
+  and Shah}{Shenoy et~al\mbox{.}}{2000}]%
+        {shenoy2000turbo}
+\bibfield{author}{\bibinfo{person}{Pradeep Shenoy}, \bibinfo{person}{Jayant~R
+  Haritsa}, \bibinfo{person}{S Sudarshan}, \bibinfo{person}{Gaurav Bhalotia},
+  \bibinfo{person}{Mayank Bawa}, {and} \bibinfo{person}{Devavrat Shah}.}
+  \bibinfo{year}{2000}\natexlab{}.
+\newblock \showarticletitle{Turbo-charging vertical mining of large databases}.
+\newblock \bibinfo{journal}{\emph{ACM Sigmod Record}} \bibinfo{volume}{29},
+  \bibinfo{number}{2} (\bibinfo{year}{2000}), \bibinfo{pages}{22--33}.
 \newblock
 
 
@@ -575,6 +746,18 @@
 \newblock
 \newblock
 \shownote{\url{https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html}.}
+
+
+\bibitem[\protect\citeauthoryear{Srikant and Agrawal}{Srikant and
+  Agrawal}{1996}]%
+        {srikant1996mining}
+\bibfield{author}{\bibinfo{person}{Ramakrishnan Srikant} {and}
+  \bibinfo{person}{Rakesh Agrawal}.} \bibinfo{year}{1996}\natexlab{}.
+\newblock \showarticletitle{Mining quantitative association rules in large
+  relational tables}. In \bibinfo{booktitle}{\emph{Proceedings of the 1996 ACM
+  SIGMOD international conference on Management of data}}.
+  \bibinfo{pages}{1--12}.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Suo, Rao, Jiang, and Srisa-an}{Suo
@@ -624,6 +807,18 @@
   processing over hybrid memories}. In \bibinfo{booktitle}{\emph{Proceedings of
   the 40th ACM SIGPLAN Conference on Programming Language Design and
   Implementation}}. \bibinfo{pages}{347--362}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Witten, Frank, Hall, Pal, and DATA}{Witten
+  et~al\mbox{.}}{2005}]%
+        {witten2005practical}
+\bibfield{author}{\bibinfo{person}{Ian~H Witten}, \bibinfo{person}{Eibe Frank},
+  \bibinfo{person}{Mark~A Hall}, \bibinfo{person}{CJ Pal}, {and}
+  \bibinfo{person}{MINING DATA}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{Practical machine learning tools and techniques}.
+  In \bibinfo{booktitle}{\emph{DATA MINING}}, Vol.~\bibinfo{volume}{2}.
+  \bibinfo{pages}{4}.
 \newblock
 
 
@@ -718,6 +913,28 @@
 \newblock \showarticletitle{Spark: Cluster computing with working sets.}
 \newblock \bibinfo{journal}{\emph{HotCloud}} \bibinfo{volume}{10},
   \bibinfo{number}{10-10} (\bibinfo{year}{2010}), \bibinfo{pages}{95}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zaki}{Zaki}{2000}]%
+        {zaki2000sequence}
+\bibfield{author}{\bibinfo{person}{Mohammed~J Zaki}.}
+  \bibinfo{year}{2000}\natexlab{}.
+\newblock \showarticletitle{Sequence mining in categorical domains:
+  incorporating constraints}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  ninth international conference on Information and knowledge management}}.
+  \bibinfo{pages}{422--429}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zaki}{Zaki}{2001}]%
+        {zaki2001spade}
+\bibfield{author}{\bibinfo{person}{Mohammed~J Zaki}.}
+  \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{SPADE: An efficient algorithm for mining frequent
+  sequences}.
+\newblock \bibinfo{journal}{\emph{Machine learning}} \bibinfo{volume}{42},
+  \bibinfo{number}{1} (\bibinfo{year}{2001}), \bibinfo{pages}{31--60}.
 \newblock
 
 

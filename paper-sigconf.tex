@@ -7,7 +7,11 @@
 
 \usepackage{subfigure}
 \usepackage{caption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 
+\algdef{SE}{Begin}{End}{\textbf{begin}}{\textbf{end}}
+\def\BState{\State\hskip-.5em}
 %%
 %% end of the preamble, start of the body of the document source.
 \begin{document}
@@ -127,16 +131,210 @@ recent works try to generate TAP rules or predict user activities based on trace
 
 Normally, traces of IoT devices are time-stamped logs of sensor readings and manual actuations of devices. The basic idea of smart space automation 
 is taking traces as input, mining the frequent and valuable patterns in the trace, recording these patterns as event-driven rules, regarding the proper features
-in the pattern as \emph{Trigger, Condition} and \emph{Action} of rules. 
+in the pattern as \emph{Trigger, Condition} and \emph{Action} of rules. When the \emph{Trigger} and \emph{Condition} of 
+IoT devices is satisfied in the future use, take the \emph{Action} foreseeingly. In this way, the process of generating of TAP rules
+is turning into the mining of frequent pattern, i.e., \textbf{Sequential Pattern Mining} or \textbf{Association Rule Mining (ARM)}.
 
-
+ARM is the task of finding correlations between items in a dataset, as sequential trace log is our main concern, the task can also 
+be considered as finding a collection of events that occur relatively close to each other in a given partial order. This article presents 
+a survey of association mining fundamentals, detailing the classic ARM algorithms, stating the key features of each 
+algorithm, showing how these algorithms are applied in the AmI related works. The contributions of this survey inluding:
 \begin{itemize}
-  \item \textbf{Memory segement}: \emph{byte} type array of fixed size 32K;
-  \item \textbf{Memory block}: \emph{long} type array of required data size;
-  \item \textbf{Cached RDD}: Array of user-defined type with required length, each element is of user-defined type.
+  \item We summarize the most representative ARM algorithms, covers a variety of general types, inluding \emph{Apriori}, \emph{SPADE}, 
+  \emph{PrefixSpan}, \emph{FP-Growth}, \emph{CLOSET}, as well as the algorithm derived from them. We describe the workflow the each algorithm, 
+  display their most important characteristics.
+  \item We investigate the ponderable works in the smart space research area, which utilize the ARM algorithm introduced in this survey to find 
+  the frequent pattern in the trace and speculate the future actions.
+  \item We discuss the current development tendency of TAP rules generating and ARM algorithm optimization, and point out notable opportunities for further work.
 \end{itemize}
+The organization of this survey is as following. From section 2 to section 6, each section will describe a representative ARM algorithm, introduce
+the algorithms generalized from the orginal algorithm, present serveral smart space applications of corresponding algorithm. section 7 will make a
+taxonomy and conclusion of current algorithms, and make a vision for future development.
 
-Modern big data processing frameworks, including Hadoop\cite{shvachko2010hadoop}, Spark\cite{zaharia2010spark} and
+\section{Apriori}
+Apriori\cite{agrawal1993mining,agrawal1994fast} is the core algorithm of \textbf{candidate generation algorithm}. Candidate generation algorithms 
+identify candidate itemsets before validating them with respect to incorporated constraints, where the generation of candidates is based
+upon previously identified valid itemsets. 
+
+All the candidate generation algorithm including Apriori work on the \textbf{apriori property}, which states that 
+\emph{“All nonempty subsets of a frequent itemset must also be frequent”}. As a consequence, if a sequence can not pass the minimum support test, 
+all of its supersequences will also fail the test. Algorithm 1 presents the iterative Apriori algorithm that requires k dataset traversals.
+\begin{algorithm}
+  \caption{Apriori algorithm}
+\begin{algorithmic}[1]
+  \Begin
+  \State $L_{1} \leftarrow Frequent 1-itemset $
+  \State $k \leftarrow 2$
+  \While {$L_{k-1} \neq \phi$}
+  \State $Temp \leftarrow candidateItemSet (L_{k-1})$
+  \State $C_{k} \leftarrow frequencyOfItemSet (Temp)$
+  \State $L_{k} \leftarrow compareWithMinSupport (C_{k}, minsup) $
+  \State $k \leftarrow k + 1$
+  \EndWhile
+  \BState \Return L
+  \End
+\end{algorithmic}
+\end{algorithm}
+Apriori introduce constraint inclusion \emph{support} to reduce exploration. The algorithm derives candidate itemsets $C_{k}$ from $V_{k-1} | k > 1$, incorporating support to
+reduce $|C_{k}|$. From this, $|V_{k}|$ is derived through a scan of the dataset, accruing counts for each $c \in |C_{k}|$. Thus given a support threshold minsup, $V_{k} = {C_{k} : \sigma(C_{k}) \geq minsup}$.
+The algorithm has two main parts, candidate generation and validation. The set of candidates is formed by the set of items, $E$, given $k=1$, 
+otherwise it is based on a merge function involving members of $L_{k-1}$. Subsequent accrual determines the candidate itemset support, 
+and those meeting the nominated threshold minsup are appended to the valid set $L_{k}$.
+
+As for candidate itemset storage structure, Apriori introduce hash-trees, a combination of b-tree and hashtable structures. The
+structure is effectively a b-tree for which every internal node is a hashtable, and every
+leaf node or bucket contains a set of itemsets. When a bucket reaches its quota of
+itemsets, the hash-tree extends by replacing the bucket with a new hashtable into
+whose buckets the itemsets are placed.
+
+\subsection{Apriori-Based Algorithms}
+To deal with the methods of counting the sequences produced, AprioriAll algorithm counts all of the sequences whereas AprioriSome
+and DynamicSome\cite{agrawal1995mining} are designed to only produce maximal sequences and therefore can
+take advantage of this by first counting longer sequences and only counting shorter
+ones that are not contained in longer ones. This is done by utilizing a forward phase that
+finds all sequences of a certain length and a backward phase that finds the remaining
+long sequences not discovered during the forward phase.
+
+In order to address time issue, Generalized Sequential Patterns (GSP) algorithm\cite{srikant1996mining} included time constraints 
+(minimum and maximum gap between transactions), sliding windows, and taxonomies. The minimum and/or maximum gap between
+adjacent elements was included to reduce the number of “trivial” rules that may be produced. The sliding window enhances the
+timing constraints by allowing elements of a sequential pattern to be present in a set of
+transactions that occur within the user-specified time window. Finally, the user-defined
+taxonomy (is-a hierarchy) which is present in many datasets allows sequential patterns
+to include elements from any level in the taxonomy.
+
+The PSP algorithm\cite{masseglia1998psp} was inspired by GSP but has improvements that make it possible to perform retrieval optimizations. 
+The process uses transactional databases as its source of data and a candidate generation and scan approach
+for the discovery of frequent sequences. The difference lies in the way that the candidate
+sequences are organized. GSP and its predecessors use hash tables at each internal
+node of the candidate tree, whereas the PSP approach organizes the candidates in a
+prefix-tree according to their common elements which results in lower memory overhead and faster retrievals.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{figures/CASAS}
+  \caption{Using Apriori-type algorithm to find rules\cite{rashidi2009keeping}}
+\end{figure}
+\subsection{Apriori-Based Applications}
+The Weka\cite{witten2005practical} implementation of an Apriori-type algorithm is used, which iteratively reduces the 
+minimum support until it finds the required number of rules 
+within a given minimum confidence. Jakkula\cite{jakkula2007learning, jakkula2007mining} using Weka to identify the frequent 
+activities, or events, which occur during the day and establishing temporal relations among them, describes a method of discovering temporal relations 
+in smart home datasets and applying them to perform activity prediction on the frequently-occurring events. It tests
+various configurations in Weka to find the best rules which can aid the prediction process.
+
+CASAS\cite{rashidi2009keeping} introduce an adaptive smart
+home system that utilizes Apriori-Based techniques to discover
+patterns in resident’s daily activities and to generate automation
+polices that mimic these patterns. Its core algorithm FPAM takes a bottom-up
+approach just like Apriori, However, unlike the Apriori algorithm, not only
+does it discover frequent sequences, but it also tries to find
+periodic sequences and their periodicity. As Figure 1 shows, FPAM extends sequences that made the cutoff in the
+previous iteration by the two events that occur before and after
+the current sequence instances in the data. FPAM
+incrementally increases the window size until no frequent or
+periodic sequences within the new window size are found or a
+user-defined limit on the window size is reached.
+
+PUBS\cite{aztiria2012discovering} discovers frequent patterns from users’ traces and turns them
+into event-driven rules that represent a subset of TAP rules. The ARM algorithm used by PUBS is similar to the
+Apriori with only two differences: 1) Limit possible associations with the object under analyzing. 2) The result 
+does not consider a pair as a pattern, but only as sensors that can be potentially related in a meaningful way. To implement,
+PUBS modify Apriori by adding the aforementioned constraints has been
+used in this step. As in every association mining process, minimum coverage, support
+and window size values must be provided.
+\section{SPADE}
+The SPADE (Sequential PAttern Discovery using Equivalence classes) algorithm\cite{zaki2001spade} is the most typical ARM algorithm for \textbf{vertical database}.
+vertical organization refers to the representation of objects as columns and with each
+row within the dataset representing an item. There are four advantages of the vertical organization over the horizontal
+organization\cite{shenoy2000turbo}:
+\begin{itemize}
+  \item Itemset validation is computationally faster in a vertical layout due to its item focus.
+  \item Given the nonmonotonic constraints, items can be easily removed from the dataset, reducing its size.
+  \item Vector compression is greater in larger datasets andhence better in a vertical layout as typically the number of objects exceeds the number of items.
+  \item Given nonmonotonic constraint inclusion, vertical organization allows the computation of an itemset once its subsets have been deemed
+  valid.
+\end{itemize}
+SPADE use combinatorial properties and lattice-based search techniques, allow constraints to
+be placed on the mined sequences. The key features of SPADE include the layout of the database in a vertical id-list
+database format with the search space decomposed into sub-lattices that can be processed independently in main memory 
+thus enabling the database to be scanned only three times or just once on some preprocessed data.
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=0.85\textwidth]{figures/vertical}
+  \caption{Vertical Formatting Data Layout\cite{zaki2001spade}}
+\end{figure*}
+Using the vertical id-list database in Figure 2, all frequent 1-sequences can be
+computed in one database scan. Computing the $F_{2}$ can be achieved in one of two ways:
+by preprocessing and collecting all 2-sequences above a user-specified lower bound, or
+by performing a vertical to horizontal transformation dynamically.
+Once this has been completed the process continues by decomposing the 2-sequences
+into prefix-based parent equivalence classes followed by the enumeration of all other
+frequent sequences via either breadth-first or depth-first searches within each equivalence class. 
+The enumeration of the frequent sequences can be performed by joining
+the id-lists in one of three ways:
+\begin{itemize}
+  \item Itemset and Itemset: joining $AS$ and $BS$ results in a new itemset $ABS$.
+  \item Itemset and Sequence: joining $AS$ with $B \to S$ results in a new sequence $B \to AS$.
+  \item Sequence and Sequence: joining $A \to S$ with $B \to S$ gives rise to three possible results: a new itemset $AB \to S$, and two new sequences $A \to B \to S$and $B \to A \to S$.
+\end{itemize}
+\subsection{SPADE-like Algorithm}
+The cSPADE algorithm\cite{zaki2000sequence} is the same as SPADE except that it incorporates
+one or more of the syntactic constraints as checks during the mining process, including length or width limitations 
+on the sequences allows for highly structured data; minimum or maximum gap constraints on consecutive sequence; applying a time window on allowable sequences, requires the entire sequence to
+occur within the window; incorporating item constraints.
+
+SPAM (Sequential PAttern Mining using a bitmap representation) \cite{ayres2002sequential} uses a novel depth-first traversal of the search space with various pruning mechanisms
+and a vertical bitmap representation of the database, which enables efficient support
+counting. A vertical bitmap for each item in the database is constructed while scanning
+the database for the first time with each bitmap having a bit corresponding to each
+element of the sequence in the database. One potential limiting factor on its usefulness
+is its requirement that all of the data fit into main memory.
+
+The CCSM (Cache-based Constrained Sequence Miner) algorithm\cite{orlando2004new} uses a level-wise approach initially but overcomes many problems associated
+with this type of algorithm. This is achieved by using k-way intersections of id-lists to compute the support of candidates
+When a new sequence is generated, and if a common prefix is contained in the cache, then
+the associated id-list is reused and subsequent lines of the cache are rewritten. This enables only a single equality join to be performed between the common prefix and the
+new item, after which the result of the join is added to cache.
+\subsection{SPADE-base Applications}
+EMS (energy management system)\cite{chen2013detecting} provides a non-intrusive and low-cost 
+solution to recognize the states of appliances and to disaggregate 
+the energy consumption of appliances in a house/building. It use SPADE to detect users' behaviors based on the usage patterns of 
+appliances. EMS find that users' behaviors strongly correlate with a 
+sequence of appliance usages and appliance states. Therefore, 
+it can utilize the data including status of appliance and the 
+time that the appliance state changes to detect users' behaviors. user behavior detection is mining 
+the sequences from a number of cases. Each case represents an 
+activity and its possible correlated events. SPADE algorithm is applied to learn the sequential patterns for each 
+activity.
+
+LFE (Load Forecasting Enhancement)\cite{ding2015sequential} gives a set of insights
+into household-specific activity sequences influencing power consumption derived from a sequence mining algorithm,
+and a load forecasting
+study using identified frequent activity sequences as an enhancement.
+The implementation utilize the SPADE algorithm to understand a household’s daily activity sequences, a
+sequence is given by all the activities performed by the
+household throughout a day and ordered by the start time of
+activities.
+
+SHGuard\cite{mao2019anomalous} is an anomaly detection approach
+based on power usage data exposed from wireless communications in the smart home system.
+SHGuard extracts and
+builds the normal behavior pattern during the initialization stage. It continuously infers the smart devices’ states
+by monitoring the electricity usage data and updates the
+user behavior patterns. 
+It choose the SPADE algorithm to perform sequential
+pattern mining on power-usage behavior sequence dataset, preprocess the
+power-usage behaviors dataset and convert it into the standard input data format of the SPADE algorithm, which is
+$s = (sequenceID, eventID,item)$, and eventually obtain a frequent sequence pattern set.
+
+\section{PrefixSpan}
+PrefixSpan (Prefix-projected Sequential Pattern mining)\cite{han2001prefixspan} is the core algorithm of \textbf{pattern growth algorithm}. The frequent pattern growth paradigm removes the need for the 
+candidate generation and prune steps that occur in the Apriori-type algorithms and does so by compressing the database representing the 
+frequent sequences into a frequent pattern tree and
+then dividing this tree into a set of projected databases, which are mined separately\cite{han2000mining}.
+
+
+Modern big data processing frameworks, including Hadoop, Spark\cite{zaharia2010spark} and
 Flink\cite{carbone2015apache}, were all implemented in object-oriented languages such as Scala and Java, due to 
 theirs applicability across heterogeneous distributed clusters, convenience on memory management, and fertility 
 of community resources. However, big data applications suffer from striking high GC cost under JVM. As reported by users and researchers,
